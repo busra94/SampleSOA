@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace SampleSOAGithub.Services
+namespace RandomLib
 {
     public interface IRandom
     {

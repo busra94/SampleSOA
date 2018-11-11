@@ -5,6 +5,9 @@ C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\bin\Debug\netcorea
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\bin\Debug\netcoreapp2.1\SampleSOAGithub.pdb
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\bin\Debug\netcoreapp2.1\SampleSOAGithub.Views.dll
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\bin\Debug\netcoreapp2.1\SampleSOAGithub.Views.pdb
+C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\bin\Debug\netcoreapp2.1\RandomLib.dll
+C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\bin\Debug\netcoreapp2.1\RandomLib.pdb
+C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.csprojAssemblyReference.cache
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.csproj.CoreCompileInputs.cache
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.RazorAssemblyInfo.cache
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.RazorAssemblyInfo.cs
@@ -27,7 +30,6 @@ C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcorea
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.RazorTargetAssemblyInfo.cache
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.RazorTargetAssemblyInfo.cs
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.Views.pdb
+C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.csproj.CopyComplete
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.dll
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.pdb
-C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.csproj.CopyComplete
-C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.csprojAssemblyReference.cache

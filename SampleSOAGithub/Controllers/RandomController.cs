@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SampleSOAGithub.Services;
-using SampleSOAGithub.Models;
-using SampleSOAGithub.ServicesImpl;
+using RandomLib;
 
-namespace SampleSOAGithub.Controllers.Random
+
+namespace SampleSOAGithub.Controllers
 {
     public class RandomController : Controller 
-    {
+    {        
+        IRandom random = new RandomServiceImpl();
         private IRandom randomService;
         public IActionResult Index()
         {
-            randomService = new RandomServicesImpl();
-            int number = randomService.random();          
+            randomService = new RandomServiceImpl ();
+            int number = randomService.random();
             return View(number);
         }
         public IRandom getRandomService()
@@ -26,7 +26,7 @@ namespace SampleSOAGithub.Controllers.Random
         public void setRandomService(IRandom randomService)
         {
             this.randomService = randomService;
-   
-        }  
+
+        }
     }
 }

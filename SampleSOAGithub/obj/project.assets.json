@@ -4615,6 +4615,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "RandomLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RandomLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RandomLib.dll": {}
+        }
       }
     }
   },
@@ -12208,6 +12218,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "RandomLib/1.0.0": {
+      "type": "project",
+      "path": "../RandomLib/RandomLib.csproj",
+      "msbuildProject": "../RandomLib/RandomLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12215,7 +12230,8 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "RandomLib >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12247,7 +12263,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Büşra\\source\\repos\\SampleSOAGithub\\RandomLib\\RandomLib.csproj": {
+              "projectPath": "C:\\Users\\Büşra\\source\\repos\\SampleSOAGithub\\RandomLib\\RandomLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
