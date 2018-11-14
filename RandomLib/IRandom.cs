@@ -8,6 +8,6 @@ namespace RandomLib
     {
         int random();
         int randomMax(int max);
-        void randomArray();
+        void randomArray(Byte[] buffer);
     }
 }

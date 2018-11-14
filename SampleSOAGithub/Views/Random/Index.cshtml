@@ -11,7 +11,11 @@
 
 <h3>Max Random Integer: @Model.RandomMax</h3>
 
-<h3>@*Array Random Integer: @Model.*@</h3>
+@foreach (var value in @Model.Buffer) {
+
+    <h3>Array Random Integers: @value  </h3>
+}
+
 
 
 

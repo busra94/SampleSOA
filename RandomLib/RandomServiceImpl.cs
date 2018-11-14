@@ -22,9 +22,8 @@ namespace RandomLib
             randomNum = new Random();
             return randomNum.Next(max); 
         }
-        public void randomArray()
-        {
-            Byte[] buffer = new Byte[10];
+        public void randomArray(Byte[] buffer)
+        {            
             randomNum = new Random();
 
             randomNum.NextBytes(buffer);
