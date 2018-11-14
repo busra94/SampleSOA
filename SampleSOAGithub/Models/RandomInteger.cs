@@ -7,6 +7,8 @@ namespace SampleSOAGithub.Models
 {
     public class RandomInteger
     {
-        public int Random { get; set; }
+        public int RandomInt { get; set; }
+        public int RandomMax { get; set; }
+       // public int[] RandomArr { get; set; }
     }
 }

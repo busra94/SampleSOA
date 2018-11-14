@@ -6,14 +6,29 @@ namespace RandomLib
 {
     public class RandomServiceImpl : IRandom
     {
+        // public int randInt; // public private ? 
+        public Random randomNum;
         public int random()
         {
-            Random random = new Random();
-            int randInt = random.Next();
+            randomNum = new Random();           
 
             // while (randInt < 0) randInt = random.Next();
 
-            return randInt;
+            return randomNum.Next(); ;
+        }
+
+        public int randomMax(int max)
+        {
+            randomNum = new Random();
+            return randomNum.Next(max); 
+        }
+        public void randomArray()
+        {
+            Byte[] buffer = new Byte[10];
+            randomNum = new Random();
+
+            randomNum.NextBytes(buffer);
+            
         }
     }
 }

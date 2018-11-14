@@ -7,5 +7,7 @@ namespace RandomLib
     public interface IRandom
     {
         int random();
+        int randomMax(int max);
+        void randomArray();
     }
 }
