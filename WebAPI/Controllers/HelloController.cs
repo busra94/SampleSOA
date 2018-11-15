@@ -11,7 +11,7 @@ namespace WebAPI.Controllers
     [ApiController]
     public class HelloController : ControllerBase
     {
-        public string Get()
+        public string GetMessage()
         {
             return "Hello World!";
         }
