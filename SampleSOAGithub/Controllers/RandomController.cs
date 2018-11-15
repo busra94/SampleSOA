@@ -38,18 +38,18 @@ namespace SampleSOAGithub.Controllers
             return View("Index", randomInteger);
 
         }
-        public IActionResult RandomArray()
-        {
-            randomInteger = new RandomInteger();
+        //public IActionResult RandomArray()
+        //{
+        //    randomInteger = new RandomInteger();
 
-            randomService = new RandomServiceImpl();
+        //    randomService = new RandomServiceImpl();
 
-            randomInteger.Buffer = new Byte[10];
-            randomService.randomArray(randomInteger.Buffer);
+        //    randomInteger.Buffer = new Byte[10];
+        //    randomService.randomArray(randomInteger.Buffer);
+                        
+        //    return View("Index", randomInteger);       
 
-            return View("Index", randomInteger);
-
-        }
+        //}
 
         public IRandom getRandomService()
         {

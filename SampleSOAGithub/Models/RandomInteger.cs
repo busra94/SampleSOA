@@ -9,7 +9,7 @@ namespace SampleSOAGithub.Models
     {
         public int RandomInt { get; set; }
         public int RandomMax { get; set; }
-        public byte[] Buffer { get; set; }
+      //  public byte[] Buffer { get; set; }
     }
 }
 

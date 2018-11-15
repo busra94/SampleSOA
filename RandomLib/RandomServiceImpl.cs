@@ -22,12 +22,12 @@ namespace RandomLib
             randomNum = new Random();
             return randomNum.Next(max); 
         }
-        public void randomArray(Byte[] buffer)
-        {            
-            randomNum = new Random();
+        //public void randomArray(Byte[] buffer)
+        //{            
+        //    randomNum = new Random();
 
-            randomNum.NextBytes(buffer);
+        //    randomNum.NextBytes(buffer);
             
-        }
+        //}
     }
 }

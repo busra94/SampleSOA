@@ -33,3 +33,4 @@ C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcorea
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.csproj.CopyComplete
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.dll
 C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\SampleSOAGithub.pdb
+C:\Users\Büşra\source\repos\SampleSOAGithub\SampleSOAGithub\obj\Debug\netcoreapp2.1\Razor\Views\Hello\Index.g.cshtml.cs

@@ -12,8 +12,8 @@ namespace SampleSOAGithub.Controllers
     {
         public IActionResult Index()
         {
-            //return View();
-            return RedirectToAction("Index", "Random");
+           // return View();
+            return RedirectToAction("Index", "Hello");
         }
 
         public IActionResult About()
