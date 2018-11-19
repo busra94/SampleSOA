@@ -13,7 +13,7 @@ namespace SampleSOAGithub.Controllers
         public IActionResult Index()
         {
            // return View();
-            return RedirectToAction("Index", "Random");
+            return RedirectToAction("Index", "Product");
         }
 
         public IActionResult About()

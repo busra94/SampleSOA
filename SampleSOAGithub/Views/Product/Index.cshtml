@@ -4,14 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model  SampleSOAGithub.Models.Product;
+@model  IEnumerable<SampleSOAGithub.Models.Product>;
 
 <h2>Index</h2>
 
+@foreach(var product in Model) {
 <ul>
-    <li>@Model.Name</li>
-    <li>@Model.Category</li>
-    <li>@Model.Price</li>
+    <li>@product.Name</li>
+    <li>@product.Category</li>
+    <li>@product.Price</li> 
 </ul>
+
+}
+
 
 

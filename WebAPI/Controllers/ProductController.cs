@@ -15,28 +15,48 @@ namespace WebAPI.Controllers
     {
         HttpClient client = new HttpClient();
 
+        List<Product> products = new List<Product>();
+
         //[HttpPost]
-        //public HttpResponseMessage AddProduct(Product product)
+        //public string PostProduct(Product product)
         //{
+        //    products.Add(product);
 
-        //    HttpResponseMessage response = client.PostAsJsonAsync("api/products", product)
-        //                                   .GetAwaiter().GetResult();
-        //    response.EnsureSuccessStatusCode();
+        //    if (!ModelState.IsValid)
+        //        return "bad request";
 
-        //    return response;
+        //    return "success";
+
         //}
 
+        [HttpPost]
+        public void AddProduct([FromBody]Product product)
+        {           
+            products.Add(product);
+
+        }
+
+
+
         [HttpGet]
-        public Product GetProduct()
+        public List<Product> GetProduct()
         {
-            Product product = new Product()
-            {
+            products.Add(
+                new Product() {
                 Name = "Gizmo",
                 Price = 34m,
-                Category = "pet"            
+                Category = "Pet"
+            });
 
-            };
-            return product;
+            products.Add(
+                new Product()
+            {
+                Name = "Shadowfax",
+                Price = 1000,
+                Category = "Pet"
+
+            });
+            return products;
         }
 
         //[HttpPut]
