@@ -17,14 +17,14 @@ namespace WebAPI.Controllers
             return randomNumber.Next();
         }
 
-        [Route("api/Random/{max}")]
-        public int getRandom(int max)
-        {
-            int maximum = max;
-            randomNumber = new Random();
+        //[Route("api/Random/{max}")]
+        //public int getRandom(int max)
+        //{
+        //    int maximum = max;
+        //    randomNumber = new Random();
 
-            return randomNumber.Next(maximum);  // when using parameter here i get an error.
-        }
+        //    return randomNumber.Next(maximum);  // when using parameter here i get an error.
+        //}
     }
 }
 

@@ -1,65 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
-using RandomLib;
+using System.Net.Http.Headers;
 using SampleSOAGithub.Models;
-
 
 namespace SampleSOAGithub.Controllers
 {
-    public class RandomController : Controller 
-    {        
-        IRandom random = new RandomServiceImpl();
-        RandomInteger randomInteger; 
-
-        private IRandom randomService;
-
+    public class RandomController : Controller
+    {
+        private const string BASE_URL = "http://localhost:52692/";
         public IActionResult Index()
         {
-            randomInteger = new RandomInteger();
+            var client = new HttpClient(); 
+            // Creating a new HttpClient instance per request can exhaust the available sockets). So you should consider removing Using(). using(var cli = new HttpClient()){//....}
 
-            randomService = new RandomServiceImpl ();
-            int randomInt= randomInteger.RandomInt = randomService.random();
+            client.BaseAddress = new Uri(BASE_URL);
 
-            return View(randomInteger);
+            client.DefaultRequestHeaders.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); // BAAKK
+
+            HttpResponseMessage responseRandom = client.GetAsync("api/random").GetAwaiter().GetResult();
+
+            if (responseRandom.IsSuccessStatusCode)
+            {
+                var responseAPI = responseRandom.Content.ReadAsStringAsync().Result;
+
+                RandomInteger random = new RandomInteger();
+                random.RandomInt = Convert.ToInt32(responseAPI);
+
+                return View(random);
+            }
+
+            return View();
         }
 
-        public IActionResult RandomMax(int maxRandom)
-        {
-            randomInteger = new RandomInteger();
-
-            randomService = new RandomServiceImpl();
-
-            randomInteger.RandomMax = randomService.randomMax(maxRandom);
-
-
-            return View("Index", randomInteger);
-
-        }
-        //public IActionResult RandomArray()
+        //Produce maximum number        
+        //public IActionResult Get()
         //{
-        //    randomInteger = new RandomInteger();
+        //    using (var client = new HttpClient())
+        //    {
 
-        //    randomService = new RandomServiceImpl();
+        //        client.BaseAddress = new Uri(BASE_URL);
 
-        //    randomInteger.Buffer = new Byte[10];
-        //    randomService.randomArray(randomInteger.Buffer);
-                        
-        //    return View("Index", randomInteger);       
+        //        client.DefaultRequestHeaders.Clear();
+        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); // BAAKK
 
+        //        HttpResponseMessage responseMaxRandom = client.GetAsync("api/random/" ).GetAwaiter().GetResult();
+
+        //        if (responseMaxRandom.IsSuccessStatusCode)
+        //        {
+        //            var responseAPI = responseMaxRandom.Content.ReadAsStringAsync().Result;
+
+        //            RandomInteger random = new RandomInteger();
+        //            random.RandomMax = Convert.ToInt32(responseAPI);
+
+        //            return View("Index",random);
+        //        }
+
+        //    }
+        //    return View();
         //}
-
-        public IRandom getRandomService()
-        {
-            return randomService;
-        }
-
-        public void setRandomService(IRandom randomService)
-        {
-            this.randomService = randomService;
-
-        }
     }
 }

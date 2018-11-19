@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
 
 namespace SampleSOAGithub.Controllers
 {
@@ -15,8 +11,7 @@ namespace SampleSOAGithub.Controllers
         public IActionResult Index()
         {
             using(var client = new HttpClient())
-            {
-                string message;
+            {               
                 // passing service base url
                 client.BaseAddress = new Uri(BASE_URL);
 
@@ -34,18 +29,15 @@ namespace SampleSOAGithub.Controllers
                     // storing the response details received from web api
                     var apiResponse = response.Content.ReadAsStringAsync().Result;
 
-                    message = apiResponse;
+              
                     // deserializing the response received from web api 
                     // message = JsonConvert.DeserializeObject(apiResponse);
-                    return View("Index", message);
+                    return View("Index", apiResponse);
                 }
-
-                message = "request failed";
-                return View("Index",message);
+        
+                return View("Index", "request failed");
                                
-            }
-
-            
+            }            
         }
     }
 }
